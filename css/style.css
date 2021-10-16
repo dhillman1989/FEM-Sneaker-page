@@ -172,6 +172,10 @@ article {
   transform: translateY(-50%);
 }
 
+.slideshow__control:hover i {
+  fill: #ff7d1a;
+}
+
 .slideshow__img {
   max-width: 100%;
   opacity: 0%;
@@ -246,6 +250,16 @@ button.addtobasket {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 10px 20px 10px #ffede0;
+  transition: transform 0.5s, background-color 0.8s;
+}
+
+button.addtobasket:hover {
+  transform: scale(0.98);
+}
+
+button.addtobasket:active {
+  transform: scale(0.95);
+  background-color: #ff9a4d;
 }
 
 @media only screen and (min-width: 480px) {
@@ -274,7 +288,7 @@ button.addtobasket {
   .header {
     max-width: 900px;
     margin: 0 auto;
-    padding: 1.2rem 1rem;
+    padding: 0 1rem;
   }
   main {
     margin: 3rem auto;
@@ -324,14 +338,14 @@ button.addtobasket {
     opacity: 1;
     margin: 0;
     padding: 0;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
     transform: translatex(0);
     flex-direction: row;
     position: relative;
     transition: none;
     width: auto;
-    height: auto;
+    height: 100px;
     top: 0;
     left: 0;
     margin-right: 0;
@@ -344,7 +358,7 @@ button.addtobasket {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     flex: 1;
   }
   .nav-menu ul li {
@@ -354,11 +368,17 @@ button.addtobasket {
     padding: 0;
     font-size: 16px;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
   }
   .nav-menu ul li a {
     color: #b6bcc8;
   }
-  .nav-menu ul li a:hover {
+  .nav-menu ul li:hover {
+    border-bottom: 2px solid #ff7d1a;
+  }
+  .nav-menu ul li:hover a {
     color: black;
   }
 }

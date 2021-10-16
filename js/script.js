@@ -50,3 +50,32 @@ thumbs.forEach((thumb) =>
         updateSlideshow();
     })
 );
+
+///-- BASKET MANAGEMENT --///
+///--///--///--///--///--///
+
+let qtyToAdd = 0;
+
+let basket = [];
+
+const updateQty = (qty) =>
+    (document.querySelector('.quantity__value').innerText = qty);
+
+document.querySelector('.quantity__plus').addEventListener('click', () => {
+    qtyToAdd++;
+    updateQty(qtyToAdd);
+});
+
+document.querySelector('.quantity__minus').addEventListener('click', () => {
+    if (qtyToAdd > 0) {
+        qtyToAdd--;
+    }
+    updateQty(qtyToAdd);
+});
+
+//ADD QTY TO BASKET
+document.querySelector('button.addtobasket').addEventListener('click', () => {
+    basket.push({ product: 'sneakers', qty: qtyToAdd });
+    qtyToAdd = 0;
+    updateQty(qtyToAdd);
+});

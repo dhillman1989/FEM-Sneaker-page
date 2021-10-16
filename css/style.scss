@@ -164,6 +164,9 @@ article {
             top: 50%;
             transform: translateY(-50%);
         }
+        &:hover i {
+            fill: $orange;
+        }
     }
     &__img {
         max-width: 100%;
@@ -235,6 +238,14 @@ button.addtobasket {
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 10px 20px 10px $paleOrange;
+    transition: transform 0.5s, background-color 0.8s;
+    &:hover {
+        transform: scale(0.98);
+    }
+    &:active {
+        transform: scale(0.95);
+        background-color: lighten($orange, 10%)
+    }
 }
 
 @media only screen and (min-width:480px) {
@@ -263,7 +274,7 @@ button.addtobasket {
     .header {
         max-width: 900px;
         margin: 0 auto;
-        padding: 1.2rem 1rem;
+        padding: 0 1rem;
     }
     main {
         margin: 3rem auto;
@@ -313,14 +324,14 @@ button.addtobasket {
         opacity: 1;
         margin: 0;
         padding: 0;
-        align-items: flex-start;
+        align-items: stretch;
         justify-content: center;
         transform: translatex(0);
         flex-direction: row;
         position: relative;
         transition: none;
         width: auto;
-        height: auto;
+        height: 100px;
         top: 0;
         left: 0;
         margin-right: 0;
@@ -333,7 +344,7 @@ button.addtobasket {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: stretch;
             flex: 1;
         }
         & ul li {
@@ -343,11 +354,17 @@ button.addtobasket {
             padding: 0;
             font-size: 16px;
             font-weight: 300;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid transparent;
         }
         & ul li a {
             color: $grayishBlue;
         }
-        & ul li a:hover {
+        & ul li:hover {
+            border-bottom: 2px solid $orange;
+        }
+        & ul li:hover a {
             color: $black;
         }
     }
