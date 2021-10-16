@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+    <header class="header">
+        <img src="./images/icon-menu.svg" class="header__menu-icon" />
+        <img src="./images/logo.svg" class="header__logo" />
+        <nav class="nav-menu">
+            <img src="./images/icon-close.svg" class="nav-menu__close-icon" />
+            <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <i class="fas fa-shopping-cart"></i>
+        <img src="./images/image-avatar.png" class="header__avatar" />
+    </header>
+    <main>
+        <section class="slideshow">
+            <div class="slideshow__control slideshow__control--left">
+                <img src="./images/icon-previous.svg" />
+            </div>
+            <img src="./images/image-product-1.jpg" class="slideshow__img active" />
+            <img src="./images/image-product-2.jpg" class="slideshow__img" />
+            <img src="./images/image-product-3.jpg" class="slideshow__img" />
+            <img src="./images/image-product-4.jpg" class="slideshow__img" />
+            <div class="slideshow__control slideshow__control--right">
+                <img src="./images/icon-next.svg" />
+            </div>
+            <div class="slideshow__thumbs">
+                <img src="./images/image-product-1-thumbnail.jpg" id="0" class="slideshow__thumb highlighted" />
+                <img src="./images/image-product-2-thumbnail.jpg" id="1" class="slideshow__thumb" />
+                <img src="./images/image-product-3-thumbnail.jpg" id="2" class="slideshow__thumb" />
+                <img src="./images/image-product-4-thumbnail.jpg" id="3" class="slideshow__thumb" />
+            </div>
+        </section>
+
+        <article>
+            <h2>Sneaker Company</h2>
+
+            <h1>Fall Limited Edition Sneakers</h1>
+
+            <p>
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+
+            <div class="prices">
+                <span class="prices__current-price">$125.00</span>
+                <span class="prices__offer">50%</span>
+                <span class="prices__full-price">$250.00</span>
+            </div>
+            <div class="basket-wrapper">
+                <div class="quantity">
+                    <span class="quantity__minus">-</span>
+                    <span class="quantity__value">0</span>
+                    <span class="quantity__plus">+</span>
+                </div>
+                <button class="addtobasket">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+            </div>
+        </article>
+    </main>
+
+    <div class="attribution" style="display: none">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
