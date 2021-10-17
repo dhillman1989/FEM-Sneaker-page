@@ -292,6 +292,7 @@ button.addtobasket:active {
 }
 
 .basket {
+  z-index: 200;
   display: flex;
   overflow: hidden;
   flex-direction: column;

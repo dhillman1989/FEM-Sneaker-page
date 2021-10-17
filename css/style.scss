@@ -278,6 +278,7 @@ button.addtobasket {
 }
 
 .basket {
+    z-index: 200;
     display: flex;
     overflow: hidden;
     flex-direction: column;
