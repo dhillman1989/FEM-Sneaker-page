@@ -46,7 +46,11 @@ p {
 }
 
 .header {
+    background-color: $white;
+    z-index: 300;
     display: flex;
+    position: sticky;
+    top: 0;
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid $grayishBlue;
@@ -282,12 +286,13 @@ button.addtobasket {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 360px;
-    height: 200px;
-    max-width: 90vw;
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    left: 5%;
+    max-width: 350px;
+    min-height: 200px;
+    width: 90%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 5px 2px #ddd;
@@ -354,6 +359,25 @@ button.addtobasket {
 
 button.addtobasket.checkout-btn {
     margin-bottom: 0;
+}
+
+@media only screen and(min-width: 420px) {
+    .basket {
+        z-index: 200;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: auto;
+        right: -50%;
+        max-width: 360px;
+        min-height: 200px;
+        width: 360px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 2px #ddd;
+    }
 }
 
 @media only screen and (min-width:480px) {
