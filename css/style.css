@@ -28,6 +28,15 @@ h2 {
   line-height: 0px;
 }
 
+button,
+.header__avatar,
+.fa-shopping-cart,
+.slideshow__thumb,
+.quantity__plus,
+.quantity__minus {
+  cursor: pointer;
+}
+
 p {
   font-weight: 400;
   color: #68707d;
@@ -228,11 +237,13 @@ article {
 .slideshow__thumb {
   border-radius: 5px;
   width: 22%;
+  transition: outline 0.5s, filter 0.5s;
+  outline: 5px solid transparent;
 }
 
 .slideshow__thumb.highlighted {
-  filter: opacity(0.75);
-  border: 5px solid #ff7d1a;
+  filter: opacity(0.5);
+  outline: 5px solid #ff7d1a;
 }
 
 .quantity {

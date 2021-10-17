@@ -37,6 +37,16 @@ h2 {
     line-height: 0px;
 }
 
+button,
+.header__avatar,
+.fa-shopping-cart,
+.slideshow__thumb,
+.quantity__plus,
+.quantity__minus,
+{
+    cursor: pointer;
+}
+
 p {
     font-weight: 400;
     color: $darkGrayishBlue;
@@ -217,10 +227,12 @@ article {
     &__thumb {
         border-radius: 5px;
         width: 22%;
+        transition: outline 0.5s, filter 0.5s;
+        outline: 5px solid transparent;
     }
     &__thumb.highlighted {
-        filter: opacity(0.75);
-        border: 5px solid $orange;
+        filter: opacity(0.5);
+        outline: 5px solid $orange;
     }
 }
 
