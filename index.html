@@ -34,7 +34,18 @@
             </ul>
         </nav>
 
-        <i class="fas fa-shopping-cart"></i>
+        <div class="basket-container">
+            <i class="fas fa-shopping-cart" id="basket-icon"><span></span></i>
+            <div id="basket" class="basket hidden">
+                <h2 class="basket__title">Cart</h2>
+                <div class="basket__content">
+                    <span class="basket__title">Your cart is empty</span>
+                </div>
+                <!-- <ul class="basket__list">
+                    
+                </ul> -->
+            </div>
+        </div>
         <img alt="avatar" src="./images/image-avatar.png" class="header__avatar" />
     </header>
     <main>
@@ -43,10 +54,12 @@
             <div class="slideshow__control slideshow__control--left">
                 <img alt="" src="./images/icon-previous.svg" />
             </div>
-            <img alt="product photo" src="./images/image-product-1.jpg" class="slideshow__img active" />
-            <img alt="product photo" src="./images/image-product-2.jpg" class="slideshow__img" />
-            <img alt="product photo" src="./images/image-product-3.jpg" class="slideshow__img" />
-            <img alt="product photo" src="./images/image-product-4.jpg" class="slideshow__img" />
+            <div class="frame">
+                <img alt="product photo" src="./images/image-product-1.jpg" class="slideshow__img active" />
+                <img alt="product photo" src="./images/image-product-2.jpg" class="slideshow__img" />
+                <img alt="product photo" src="./images/image-product-3.jpg" class="slideshow__img" />
+                <img alt="product photo" src="./images/image-product-4.jpg" class="slideshow__img" />
+            </div>
             <div class="slideshow__control slideshow__control--right">
                 <img alt="" src="./images/icon-next.svg" />
             </div>
